@@ -1,10 +1,24 @@
-const { sys_users } = require(process.cwd() + '/models')
+const { sys_users, sys_users_role, sys_roles } = require(process.cwd() + '/models')
 const router = require('koa-router')()
 const base = '/sys/user'
 const uuid = require('uuid')
 router.get(base + '/list', async(ctx) => {
   try {
-    const data = await sys_users.findAll(
+    const data = await sys_users.findAll()
+    ctx.success(data)
+  } catch (e) {
+    console.log(e)
+  }
+})
+router.get(base + '/queryUserRole', async(ctx) => {
+  try {
+    const { id } = ctx.request.query
+    const data = await sys_users_role.findAll(
+      {
+        where: {
+          user_id: id
+        }
+      }
     )
     ctx.success(data)
   } catch (e) {
@@ -50,6 +64,16 @@ router.post(base + '/edit', async(ctx) => {
       {
         where: {
           id: params.id
+        }
+      }
+    )
+    await sys_users_role.update(
+      {
+        role_id: params.roles
+      },
+      {
+        where: {
+          user_id: params.id
         }
       }
     )
