@@ -13,18 +13,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.4.0",
     "eslint": "^5.15.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.2.1",
+    "koa-multer": "^1.0.2",
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.6",
     "moment": "^2.29.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.22",
     "request": "^2.88.0",
-    "sequelize": "^6.3.5",
-    "koa-multer": "^1.0.2"
+    "sequelize": "^6.3.5"
   }
 }

@@ -13,5 +13,6 @@ fs.readdirSync(__dirname)
     router.use(require('./' + file))
   })
 router.get('/test', async(ctx, next) => {
+  ctx.body = 'Hello, Koa!'
 })
 module.exports = router

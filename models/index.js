@@ -1,10 +1,11 @@
 const Sequelize = require('sequelize')
-const config = require('../config')
+const config = require('../config.js')
 const fs = require('fs')
-let db = {}
+const db = {}
 const path = require('path')
 const basename = path.basename(__filename)
 let sequelize = null
+console.log(config)
 sequelize = new Sequelize(config.sequelize)
 sequelize
   .authenticate()

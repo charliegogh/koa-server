@@ -17,7 +17,7 @@ router.post('/loginPC', async(ctx) => {
     ctx.body = {
       code: 200,
       msg: jwt.sign({ id: data.id }, secret, {
-        expiresIn: 6000 // 20min  过期
+        expiresIn: 43200 // 20min  过期
       })
     }
   } catch (e) {
@@ -29,6 +29,7 @@ router.post('/loginPC', async(ctx) => {
  *  获取用户信息
  */
 router.post('/getUserInfo', async(ctx) => {
+  ctx.set('Custom-Header', 'Custom Value')
   const { authorization } = ctx.request.header
   const id = jwt.verify(authorization, secret, (err, decode) => {
     if (!err) {
