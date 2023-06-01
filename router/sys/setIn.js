@@ -29,8 +29,8 @@ router.post('/loginPC', async(ctx) => {
  *  获取用户信息
  */
 router.post('/getUserInfo', async(ctx) => {
-  ctx.set('Custom-Header', 'Custom Value')
   const { authorization } = ctx.request.header
+  console.log(authorization)
   const id = jwt.verify(authorization, secret, (err, decode) => {
     if (!err) {
       return decode.id
