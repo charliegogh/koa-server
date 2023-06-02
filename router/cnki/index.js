@@ -15,4 +15,8 @@ router.post('/cnkiLog', async(ctx) => {
   })
   ctx.success(data)
 })
+router.get('/cnkiLog/list', async(ctx) => {
+  const data = await cnki_log.findAll()
+  ctx.success(data)
+})
 module.exports = router.routes()

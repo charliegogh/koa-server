@@ -7,7 +7,7 @@ router.get(base + '/getTableList', async(ctx) => {
 })
 router.get(base + '/getColumnList', async(ctx) => {
   const { tableName } = ctx.request.query
-  const sql = `select COLUMN_NAME as COLUMN_NAME,column_comment as COLUMN_COMMENT,COLUMN_TYPE as COLUMN_TYPE from Information_schema.columns where table_schema='charlie' and table_name = '${tableName}'`
+  const sql = `select COLUMN_NAME as COLUMN_NAME,column_comment as COLUMN_COMMENT,COLUMN_TYPE as COLUMN_TYPE from Information_schema.columns where table_schema='vue-admin' and table_name = '${tableName}'`
   ctx.body = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT })
 })
 
