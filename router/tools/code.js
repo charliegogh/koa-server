@@ -61,7 +61,6 @@ router.post(base + '/preview', async(ctx) => {
           :columns="columns"
           size="middle"
           :data-source="dataSource"
-          :loading="loading"
           :pagination="ipagination"
           :row-key="record=>record.id"
           :loading="loading"

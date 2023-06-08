@@ -48,6 +48,11 @@ router.post(base + '/add', async(ctx) => {
         id: uuid.v1(),
         ...params
       })
+    await sys_users_role.create(
+      {
+        id: uuid.v1(),
+        roles: params.roles
+      })
     ctx.success()
   } catch (e) {
     ctx.fail(e)
