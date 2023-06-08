@@ -43,15 +43,17 @@ router.delete(base + '/delete', async(ctx) => {
 router.post(base + '/add', async(ctx) => {
   const params = ctx.request.body
   try {
+    const userId = uuid.v1()
     await sys_users.create(
       {
-        id: uuid.v1(),
+        id: userId,
         ...params
       })
     await sys_users_role.create(
       {
         id: uuid.v1(),
-        roles: params.roles
+        role_id: params.roles,
+        user_id: userId
       })
     ctx.success()
   } catch (e) {
