@@ -26,6 +26,11 @@
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.22",
     "request": "^2.88.0",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "xmind": "^2.2.30"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^2.0.6",
+    "koa2-connect": "^1.0.2"
   }
 }

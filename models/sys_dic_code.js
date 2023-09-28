@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) =>
       },
       remark: {
         type: DataTypes.INTEGER,
-        allowNull: true,
+        allowNull: true
       },
       createTime: {
         type: DataTypes.STRING,
