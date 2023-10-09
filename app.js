@@ -9,7 +9,7 @@ const k2c = require('koa2-connect')
 const { createProxyMiddleware } = require('http-proxy-middleware')
 const app = new Koa()
 // const LID = 'WEEvREcwSlJHSldTTEYzVnBFdUNiTmFEaHBsU0tkSDZxamFCbFNqWk9OWT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!'
-const LID = 'WEEvREcwSlJHSldTTEYyRTJmdkt2cXZYdmpzbzRZL0xXRE5TV0hzR1ZjQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!'
+const LID = 'WEEvREcwSlJHSldTTEYyVWs3STBBMlE5Y3RzZElKR042a1hVdGlMQm1lZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!'
 // 路由
 app
   // 跨域配置
