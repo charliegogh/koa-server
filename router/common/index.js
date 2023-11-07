@@ -15,20 +15,9 @@ function flattenArray(arr) {
   }, [])
 }
 
-router.get('/test', async() => {
-  fs.readFile('results.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error('读取文件出错：', err)
-    } else {
-      const rs = flattenArray(JSON.parse(data))
-      fs.writeFile('rs.json', JSON.stringify(rs), (err) => {
-        if (err) {
-          console.error('写入文件出错：', err)
-        } else {
-          console.log('结果已成功导出到 results.json 文件')
-        }
-      })
-    }
-  })
+router.post('/test', async(ctx) => {
+  ctx.body = {
+    data: 0
+  }
 })
 module.exports = router.routes()
