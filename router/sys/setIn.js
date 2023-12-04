@@ -30,7 +30,6 @@ router.post('/loginPC', async(ctx) => {
  */
 router.post('/getUserInfo', async(ctx) => {
   const { authorization } = ctx.request.header
-  console.log(authorization)
   const id = jwt.verify(authorization, secret, (err, decode) => {
     if (!err) {
       return decode.id

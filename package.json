@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "set node_env=development&&nodemon app.js",
-    "serve": "nodemon ./app.js",
+    "serve": "node app.js",
     "ws": "nodemon ./ws/index.js",
     "debug": "nodemon --inspect ./app.js",
     "lint-fix": "eslint --fix **/*.js"

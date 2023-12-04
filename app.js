@@ -16,7 +16,6 @@ app
     credentials: true, // 允许发送跨域凭证(cookie、HTTP认证及客户端SSL证明等)
     exposeHeaders: ['Custom-Header'] // 允许前端访问的自定义响应头字段
   }))
-  // bodyParser:post 请求体解析
   .use(bodyParser({
     multipart: true, // 支持文件上传
     enableTypes: ['json', 'form', 'text'],
