@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EventStream Example</title>
+    </head>
+    <body>
+    <textarea id="input"></textarea>
+    <button id="send">发送</button>
+    <button id="stop">停止</button>
+    <script src="./EventStream.js" type="text/javascript"></script>
+    <script>
+        const eventStreamClient = new EventStreamClient()
+        eventStreamClient.$on(e=>{
+            console.log(e)
+        })
+        document.querySelector('#send')
+            .addEventListener('click',()=>{
+                const value = document.querySelector('#input').value
+                eventStreamClient.$emit('')
+            })
+        document.querySelector('#stop')
+            .addEventListener('click',()=>{
+            eventStreamClient.onClose()
+        })
+    </script>
 
-</body>
-</html>
+    </body>
+    </html>

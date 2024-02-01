@@ -2,7 +2,7 @@
 FROM node:latest
 
 # 设置工作目录
-WORKDIR /home/koa
+WORKDIR /home/node-serve/
 
 # 复制 package.json 和 package-lock.json（如果有）到工作目录
 COPY package*.json ./

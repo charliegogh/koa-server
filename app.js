@@ -5,8 +5,6 @@ const cors = require('koa2-cors')
 const logger = require('koa-logger')()
 const config = require('./config.js') // 全局配置
 const routerResponse = require('./utils/response')
-// const k2c = require('koa2-connect')
-// const { createProxyMiddleware } = require('http-proxy-middleware')
 const app = new Koa()
 // 路由
 app

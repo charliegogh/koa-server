@@ -1,8 +1,7 @@
-const { sys_dic_code, sys_dic_value } = require(process.cwd() + '/models')
+const { sys_dic_code } = require(process.cwd() + '/models')
 const router = require('koa-router')()
 const base = '/sys/dictCode'
 const uuid = require('uuid')
-const { flatToTree } = require(process.cwd() + '/utils/tree')
 const moment = require('moment')
 // 获取菜单列表
 router.get(base + '/getList', async(ctx) => {
